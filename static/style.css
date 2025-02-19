@@ -6,6 +6,20 @@ html, body {
     margin: 0;
     padding: 0;
 }
+.mailru-counter {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 1000;
+    background: #fff;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.mailru-logo {
+    margin-top: 5px;
+    text-align: center;
+}
 
 .rambler-counter {
   display: block;
