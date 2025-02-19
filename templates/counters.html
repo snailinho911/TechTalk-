@@ -1,45 +1,65 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <title>{{ title }}</title>
-    <link rel="stylesheet" href="/static/style.css">
+  <meta charset="UTF-8">
+  <title>{{ title }}</title>
+  <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
-    <!-- Фиксированная шапка -->
-<header>
-  <div class="header-content">
-    <div class="logo">
-      <a href="/">TechTalk Hub</a>
-    </div>
-    <nav>
-      <a href="/">Главная</a>
-      <a href="/about">О сайте</a>
-      <a href="/contact">Контакты</a>
-      <a href="/blog">Блог</a>
-      {% if current_user %}
+  <!-- Код LiveInternet счетчика (размещаем сразу после <body> для точного учета) -->
+  <div class="header-counter">
+    <a href="https://www.liveinternet.ru/click" target="_blank">
+      <img id="licnt561B" width="88" height="31" style="border:0"
+           title="LiveInternet: показано число просмотров за 24 часа, посетителей за 24 часа и за сегодня"
+           src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+           alt="LiveInternet счетчик"/>
+    </a>
+    <script>
+      (function(d,s){
+        d.getElementById("licnt561B").src =
+          "https://counter.yadro.ru/hit?t11.6;r" + escape(d.referrer) +
+          ((typeof(s)=="undefined") ? "" : ";s" + s.width + "*" + s.height + "*" +
+          (s.colorDepth ? s.colorDepth : s.pixelDepth)) +
+          ";u" + escape(d.URL) +
+          ";h" + escape(d.title.substring(0,150)) + ";" + Math.random();
+      })(document, screen);
+    </script>
+  </div>
+
+  <!-- Фиксированная шапка сайта -->
+  <header>
+    <div class="header-content">
+      <div class="logo">
+        <a href="/">TechTalk Hub</a>
+      </div>
+      <nav>
+        <a href="/">Главная</a>
+        <a href="/about">О сайте</a>
+        <a href="/contact">Контакты</a>
+        <a href="/blog">Блог</a>
+        {% if current_user %}
           <a href="/logout">Выйти</a>
-      {% else %}
+        {% else %}
           <a href="/login">Вход</a>
           <a href="/register">Регистрация</a>
-      {% endif %}
-    </nav>
-  </div>
-</header>
+        {% endif %}
+      </nav>
+    </div>
+  </header>
 
-     <div class="wrapper">
-      <main>
-        <h2>LiveInternet</h2>
-        <p>Здесь можно разместить код счетчика статистики (например, LiveInternet).</p>
-
+  <!-- Основной контент страницы -->
+  <div class="wrapper">
+    <main>
+      <h2>LiveInternet</h2>
+      <p>На данной странице интегрирован счетчик статистики LiveInternet, который позволяет отслеживать количество просмотров за сутки, а также число посетителей за сегодня и за 24 часа.</p>
+      <p>Счетчик установлен в верхней части страницы, сразу после открытия тега <code>&lt;body&gt;</code> для максимально точного учета посещаемости.</p>
     </main>
+  </div>
 
-         </div>
-
-    <!-- Подвал -->
-    <footer>
-        <p>© 2025 Все права защищены!</p>
-    </footer>
-
+  <!-- Подвал сайта -->
+  <footer>
+    <p>© 2025 TechTalk Hub. Все права защищены.</p>
+  </footer>
 </body>
 </html>
+
