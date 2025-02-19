@@ -6,42 +6,62 @@
     <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
-    <!-- Фиксированная шапка -->
-    <header>
-      <div class="header-content">
-        <div class="logo">
-          <a href="/">TechTalk Hub</a>
-        </div>
-        <nav>
-          <a href="/">Главная</a>
-          <a href="/about">О сайте</a>
-          <a href="/contact">Контакты</a>
-          <a href="/blog">Блог</a>
-          {% if current_user %}
-              <a href="/logout">Выйти</a>
-          {% else %}
-              <a href="/login">Вход</a>
-              <a href="/register">Регистрация</a>
-          {% endif %}
-        </nav>
+  <!-- Код LiveInternet счетчика -->
+  <div class="header-counter">
+    <a href="https://www.liveinternet.ru/click" target="_blank">
+      <img id="licnt561B" width="88" height="31" style="border:0"
+           title="LiveInternet: показано число просмотров за 24 часа, посетителей за 24 часа и за сегодня"
+           src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+           alt="LiveInternet счетчик"/>
+    </a>
+    <script>
+      (function(d,s){
+        d.getElementById("licnt561B").src =
+          "https://counter.yadro.ru/hit?t11.6;r"+escape(d.referrer)+
+          ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+          (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+          ";h"+escape(d.title.substring(0,150))+";"+Math.random();
+      })(document, screen);
+    </script>
+  </div>
+
+  <!-- Фиксированная шапка -->
+  <header>
+    <div class="header-content">
+      <div class="logo">
+        <a href="/">TechTalk Hub</a>
       </div>
-    </header>
-
-    <!-- Обёртка для контента -->
-    <div class="wrapper">
-      <main>
-        <h2>О TechTalk Hub</h2>
-        <p>TechTalk Hub — это динамичная платформа, созданная для обмена знаниями и опытом в мире современных технологий. Наш портал посвящён последним новостям IT-индустрии, аналитическим обзорам, а также полезным статьям и гайдам по программированию.</p>
-        <h3>Наша цель</h3>
-        <p>Мы стремимся создать сообщество, где энтузиасты технологий, разработчики и эксперты могут делиться своими идеями, решать сложные задачи и оставаться в курсе самых актуальных трендов.</p>
-        <h3>Наша команда</h3>
-        <p>За проектом стоят профессионалы с многолетним опытом в IT-сфере. Мы объединяемся, чтобы сделать информацию доступной и полезной для всех, кто интересуется технологиями и инновациями.</p>
-      </main>
+      <nav>
+        <a href="/">Главная</a>
+        <a href="/about">О сайте</a>
+        <a href="/contact">Контакты</a>
+        <a href="/blog">Блог</a>
+        {% if current_user %}
+          <a href="/logout">Выйти</a>
+        {% else %}
+          <a href="/login">Вход</a>
+          <a href="/register">Регистрация</a>
+        {% endif %}
+      </nav>
     </div>
+  </header>
 
-    <!-- Подвал -->
-    <footer>
-      <p>© 2025 TechTalk Hub. Все права защищены.</p>
-    </footer>
+  <!-- Обёртка для контента -->
+  <div class="wrapper">
+    <!-- Основной контент страницы -->
+    <main>
+      <h2>О TechTalk Hub</h2>
+      <p>TechTalk Hub — это динамичная платформа, созданная для обмена знаниями и опытом в мире современных технологий. Наш портал посвящён последним новостям IT-индустрии, аналитическим обзорам, а также полезным статьям и гайдам по программированию.</p>
+      <h3>Наша цель</h3>
+      <p>Мы стремимся создать сообщество, где энтузиасты технологий, разработчики и эксперты могут делиться своими идеями, решать сложные задачи и оставаться в курсе самых актуальных трендов.</p>
+      <h3>Наша команда</h3>
+      <p>За проектом стоят профессионалы с многолетним опытом в IT-сфере. Мы объединяемся, чтобы сделать информацию доступной и полезной для всех, кто интересуется технологиями и инновациями.</p>
+    </main>
+  </div>
+
+  <!-- Подвал -->
+  <footer>
+    <p>© 2025 TechTalk Hub. Все права защищены.</p>
+  </footer>
 </body>
 </html>

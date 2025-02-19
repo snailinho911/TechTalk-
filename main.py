@@ -182,9 +182,10 @@ async def blog(
 
 
 
-@app.post("/counters", response_class=HTMLResponse)
-async def counters(request: Request,current_user: Optional[User] = Depends(get_current_user_from_cookie)):
-    return templates.TemplateResponse("thank_you.html", {"request": request, "title": "Счетчики", "current_user": current_user})
+@app.get("/counters", response_class=HTMLResponse)
+async def counters(request: Request, current_user: Optional[User] = Depends(get_current_user_from_cookie)):
+    return templates.TemplateResponse("counters.html", {"request": request, "title": "Счетчики", "current_user": current_user})
+
 
 # ====== Авторизация с JWT ======
 
