@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+     <title>Спасибо!</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <!-- Фиксированная шапка -->
+<header>
+  <div class="header-content">
+    <div class="logo">
+      <a href="/">TechTalk Hub</a>
+    </div>
+    <nav>
+      <a href="/">Главная</a>
+      <a href="/about">О сайте</a>
+      <a href="/contact">Контакты</a>
+      <a href="/blog">Блог</a>
+      {% if current_user %}
+          <a href="/logout">Выйти</a>
+      {% else %}
+          <a href="/login">Вход</a>
+          <a href="/register">Регистрация</a>
+      {% endif %}
+    </nav>
+  </div>
+</header>
+
+     <div class="wrapper">
+      <main>
+          <h1>Спасибо, {{ name }}!</h1>
+        <p>Мы получили ваше сообщение и свяжемся с вами в ближайшее время.</p>
+    </main>
+
+         </div>
+
+    <!-- Подвал -->
+    <footer>
+        <p>© 2025 Все права защищены!</p>
+
+</body>
+</html>

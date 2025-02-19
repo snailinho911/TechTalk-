@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <!-- Фиксированная шапка -->
+<header>
+  <div class="header-content">
+    <div class="logo">
+      <a href="/">TechTalk Hub</a>
+    </div>
+    <nav>
+      <a href="/">Главная</a>
+      <a href="/about">О сайте</a>
+      <a href="/contact">Контакты</a>
+      <a href="/blog">Блог</a>
+      {% if current_user %}
+          <a href="/logout">Выйти</a>
+      {% else %}
+          <a href="/login">Вход</a>
+          <a href="/register">Регистрация</a>
+      {% endif %}
+    </nav>
+  </div>
+</header>
+
+     <div class="wrapper">
+      <main>
+        <h2>LiveInternet</h2>
+        <p>Здесь можно разместить код счетчика статистики (например, LiveInternet).</p>
+        <div id="liveinternet_counter">
+            <!-- Вставьте HTML-код счетчика LiveInternet -->
+        </div>
+    </main>
+
+         </div>
+
+    <!-- Подвал -->
+    <footer>
+        <p>© 2025 Все права защищены!</p>
+
+</body>
+</html>

@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
+
+/* Сброс и базовые стили */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* Flex-контейнер, чтобы футер «прижимался» к низу */
+    display: flex;
+    flex-direction: column;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* Шапка (header), фиксированная сверху */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+
+    background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    padding: 0;
+}
+
+/* Стили для логотипа */
+header .logo a {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+}
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    max-width: 960px; /* или 960px, на ваш вкус */
+    margin: 0 auto;    /* центрируем по горизонтали */
+    padding: 20px 30px; /* внутренние отступы */
+}
+
+
+
+/* Навигация */
+header nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 10px;
+    font-weight: 700;
+    transition: opacity 0.3s;
+}
+
+header nav a:hover {
+    opacity: 0.8;
+}
+
+/* Обёртка для основного контента, чтобы задать отступ под фиксированный header */
+.wrapper {
+    flex: 1 0 auto;   /* Растягиваемся, чтобы футер сдвигался вниз */
+    margin-top: 100px; /* Отступ равен (или чуть больше) высоте шапки */
+}
+
+/* Герой-блок (hero) */
+.hero {
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    max-width: 960px;
+    margin: 0 auto 20px;
+    border-radius: 8px;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.hero .btn {
+    background: #11998e;
+    color: #fff;
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 4px;
+    transition: background 0.3s;
+    font-weight: 700;
+}
+
+.hero .btn:hover {
+    background: #0f877f;
+}
+
+/* Основная область (main) */
+main {
+    max-width: 960px;
+    margin: 0 auto 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+main h2 {
+    margin-bottom: 20px;
+}
+
+/* Формы */
+form label {
+    display: block;
+    margin: 15px 0 5px;
+    font-weight: 700;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font: inherit;
+}
+
+form button {
+    background: #11998e;
+    color: #fff;
+    border: none;
+    padding: 12px 30px;
+    margin-top: 15px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background 0.3s;
+    font-weight: 700;
+}
+
+form button:hover {
+    background: #0f877f;
+}
+
+/* Блоки статей в блоге */
+article {
+    margin-bottom: 20px;
+}
+
+article h2 {
+    color: #11998e;
+    margin-bottom: 10px;
+}
+
+/* Подвал (footer) */
+footer {
+    flex-shrink: 0;
+    color: black;
+    text-align: center;
+    padding: 10px 0;
+}
+
+footer p {
+    margin-bottom: 5px;
+}
