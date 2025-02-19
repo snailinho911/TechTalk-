@@ -46,7 +46,30 @@ header .logo a {
     padding: 20px 30px; /* внутренние отступы */
 }
 
+.header-counter {
+    display: block;
+    position: absolute; /* Абсолютное позиционирование */
+    top: 20px;          /* Отступ от верха шапки, настройте по вкусу */
+    right: 30px;         /* Отступ от правого края шапки, настройте по вкусу, чтобы совпадал с отступами header-content */
+    z-index: 1000;      /* Убедитесь, что счетчик выше других элементов */
+    padding: 0;         /* Убираем padding */
+    border: none;        /* Убираем рамку */
+    background-color: transparent; /* Делаем фон прозрачным */
+}
 
+.header-counter a {
+    display: block;
+}
+
+.header-counter img {
+    border: 0;
+    opacity: 0.7; /*  Можно немного уменьшить видимость, сделать полупрозрачным */
+    transition: opacity 0.3s; /*  Плавное изменение прозрачности при наведении */
+}
+
+.header-counter img:hover {
+    opacity: 1; /*  При наведении делаем полностью видимым */
+}
 
 /* Навигация */
 header nav a {
