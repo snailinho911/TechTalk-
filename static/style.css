@@ -9,7 +9,7 @@ html, body {
 .mailru-counter {
     position: absolute;
     top: 20px;            /* Расположим на том же уровне, что и LiveInternet */
-    right: 70px;          /* Отступ от правого края (чуть больше, чем у LiveInternet) */
+    right: 90px;          /* Отступ от правого края (чуть больше, чем у LiveInternet) */
     z-index: 1000;
     padding: 0;
     border: none;
