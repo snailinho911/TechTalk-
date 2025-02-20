@@ -6,142 +6,142 @@
   <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
-  <!-- Yandex.Метрика informer -->
-  <a href="https://metrika.yandex.ru/stat/?id=99987528&amp;from=informer" target="_blank" rel="nofollow">
-    <img src="https://informer.yandex.ru/informer/99987528/3_0_B9FFB9FF_99FF99FF_0_pageviews"
-         style="width:88px; height:31px; border:0;"
-         alt="Яндекс.Метрика"
-         title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)"
-         class="ym-advanced-informer"
-         data-cid="99987528" data-lang="ru" />
-  </a>
-  <!-- /Yandex.Метрика informer -->
-
-  <!-- Yandex.Метрика counter -->
-  <script type="text/javascript">
-    (function(m,e,t,r,i,k,a){
-      m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-      m[i].l=1*new Date();
-      for(var j=0; j<document.scripts.length; j++){
-        if(document.scripts[j].src===r){ return; }
-      }
-      k=e.createElement(t), a=e.getElementsByTagName(t)[0],
-      k.async=1, k.src=r, a.parentNode.insertBefore(k,a)
-    })(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-
-    ym(99987528, "init", {
-      clickmap:true,
-      trackLinks:true,
-      accurateTrackBounce:true,
-      webvisor:true
-    });
-  </script>
-  <noscript>
-    <div>
-      <img src="https://mc.yandex.ru/watch/99987528" style="position:absolute; left:-9999px;" alt=""/>
-    </div>
-  </noscript>
-  <!-- /Yandex.Метрика counter -->
-
-  <!-- Top.Mail.Ru counter и логотип -->
-  <div class="mailru-counter">
-    <script type="text/javascript">
-      var _tmr = window._tmr || (window._tmr = []);
-      _tmr.push({id: "3615702", type: "pageView", start: (new Date()).getTime()});
-      (function(d, w, id){
-        if(d.getElementById(id)) return;
-        var ts = d.createElement("script");
-        ts.type = "text/javascript"; ts.async = true; ts.id = id;
-        ts.src = "https://top-fwz1.mail.ru/js/code.js";
-        var f = function(){
-          var s = d.getElementsByTagName("script")[0];
-          s.parentNode.insertBefore(ts, s);
-        };
-        if(w.opera=="[object Opera]"){
-          d.addEventListener("DOMContentLoaded", f, false);
-        } else { f(); }
-      })(document, window, "tmr-code");
-    </script>
-    <noscript>
-      <div>
-        <img src="https://top-fwz1.mail.ru/counter?id=3615702;js=na"
-             style="position:absolute; left:-9999px;" alt="Top.Mail.Ru"/>
-      </div>
-    </noscript>
-    <a href="https://top-fwz1.mail.ru/jump?from=3615702">
-      <img src="https://top-fwz1.mail.ru/counter?id=3615702;t=566;l=1"
-           height="40" width="88" alt="Top.Mail.Ru" style="border:0;"/>
-    </a>
-  </div>
-  <!-- /Top.Mail.Ru counter и логотип -->
-
-  <!-- Обёртка для счётчика Rambler -->
-  <div class="rambler-counter">
-    <script>
-      (function(w, d, c){
-        (w[c] = w[c] || []).push(function(){
-          var options = { project: 7736292 };
-          try { w.top100Counter = new top100(options); } catch(e) {}
-        });
-        var n = d.getElementsByTagName("script")[0],
-            s = d.createElement("script"),
-            f = function(){ n.parentNode.insertBefore(s, n); };
-        s.type = "text/javascript";
-        s.async = true;
-        s.src = (d.location.protocol=="https:" ? "https:" : "http:") +
-                "//st.top100.ru/top100/top100.js";
-        if(w.opera=="[object Opera]"){
-          d.addEventListener("DOMContentLoaded", f, false);
-        } else { f(); }
-      })(window, document, "_top100q");
-    </script>
-    <noscript>
-      <img src="//counter.rambler.ru/top100.cnt?pid=7736292" alt="Топ-100"/>
-    </noscript>
-  </div>
-  <!-- /Обёртка для счётчика Rambler -->
-
-  <!-- LiveInternet счетчик -->
-  <div class="header-counter">
-    <a href="https://www.liveinternet.ru/click" target="_blank">
-      <img id="licnt561B" width="88" height="31" style="border:0"
-           title="LiveInternet: показано число просмотров за 24 часа, посетителей за 24 часа и за сегодня"
-           src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
-           alt="LiveInternet счетчик"/>
-    </a>
-    <script>
-      (function(d,s){
-        d.getElementById("licnt561B").src =
-          "https://counter.yadro.ru/hit?t11.6;r" + escape(d.referrer) +
-          ((typeof(s)=="undefined") ? "" : ";s" + s.width + "*" + s.height + "*" +
-          (s.colorDepth ? s.colorDepth : s.pixelDepth)) +
-          ";u" + escape(d.URL) +
-          ";h" + escape(d.title.substring(0,150)) + ";" + Math.random();
-      })(document, screen);
-    </script>
-  </div>
-  <!-- /LiveInternet счетчик -->
-
-  <!-- Фиксированная шапка -->
   <header>
-    <div class="header-content">
-      <div class="logo">
-        <a href="/">TechTalk Hub</a>
-      </div>
-      <nav>
-        <a href="/">Главная</a>
-        <a href="/about">О сайте</a>
-        <a href="/contact">Контакты</a>
-        <a href="/blog">Блог</a>
-        {% if current_user %}
+  <div class="header-content">
+    <div class="logo">
+      <a href="/">TechTalk Hub</a>
+    </div>
+    <nav>
+      <a href="/">Главная</a>
+      <a href="/about">О сайте</a>
+      <a href="/contact">Контакты</a>
+      <a href="/blog">Блог</a>
+      {% if current_user %}
           <a href="/logout">Выйти</a>
-        {% else %}
+      {% else %}
           <a href="/login">Вход</a>
           <a href="/register">Регистрация</a>
-        {% endif %}
-      </nav>
+      {% endif %}
+    </nav>
+
+    <!-- Блок для всех счетчиков -->
+    <div class="counters">
+      <!-- Яндекс.Метрика inforer и counter -->
+      <a href="https://metrika.yandex.ru/stat/?id=99987528&amp;from=informer" target="_blank" rel="nofollow">
+        <img src="https://informer.yandex.ru/informer/99987528/3_0_B9FFB9FF_99FF99FF_0_pageviews"
+             style="width:88px; height:31px; border:0;"
+             alt="Яндекс.Метрика"
+             title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)"
+             class="ym-advanced-informer"
+             data-cid="99987528"
+             data-lang="ru" />
+      </a>
+      <script type="text/javascript">
+         (function(m,e,t,r,i,k,a){
+           m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+           m[i].l=1*new Date();
+           for (var j = 0; j < document.scripts.length; j++) {
+             if (document.scripts[j].src === r) { return; }
+           }
+           k=e.createElement(t), a=e.getElementsByTagName(t)[0],
+           k.async=1, k.src=r, a.parentNode.insertBefore(k,a)
+         })(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+         ym(99987528, "init", {
+              clickmap:true,
+              trackLinks:true,
+              accurateTrackBounce:true,
+              webvisor:true
+         });
+      </script>
+      <noscript>
+         <div>
+           <img src="https://mc.yandex.ru/watch/99987528" style="position:absolute; left:-9999px;" alt="" />
+         </div>
+      </noscript>
+      
+      <!-- Top.Mail.Ru counter и логотип -->
+      <div class="mailru-counter">
+        <script type="text/javascript">
+          var _tmr = window._tmr || (window._tmr = []);
+          _tmr.push({id: "3615702", type: "pageView", start: (new Date()).getTime()});
+          (function (d, w, id) {
+            if (d.getElementById(id)) return;
+            var ts = d.createElement("script"); 
+            ts.type = "text/javascript"; ts.async = true; ts.id = id;
+            ts.src = "https://top-fwz1.mail.ru/js/code.js";
+            var f = function () {
+              var s = d.getElementsByTagName("script")[0];
+              s.parentNode.insertBefore(ts, s);
+            };
+            if (w.opera == "[object Opera]") {
+              d.addEventListener("DOMContentLoaded", f, false);
+            } else { 
+              f(); 
+            }
+          })(document, window, "tmr-code");
+        </script>
+        <noscript>
+          <div>
+            <img src="https://top-fwz1.mail.ru/counter?id=3615702;js=na"
+                 style="position:absolute;left:-9999px;" alt="Top.Mail.Ru" />
+          </div>
+        </noscript>
+        <a href="https://top-fwz1.mail.ru/jump?from=3615702">
+          <img src="https://top-fwz1.mail.ru/counter?id=3615702;t=566;l=1"
+               height="40" width="88" alt="Top.Mail.Ru" style="border:0;" />
+        </a>
+      </div>
+      
+      <!-- Rambler counter (без fallback-изображения) -->
+      <div class="rambler-counter">
+        <script>
+          (function (w, d, c) {
+            (w[c] = w[c] || []).push(function() {
+                var options = { project: 7736292 };
+                try {
+                    w.top100Counter = new top100(options);
+                } catch(e) {}
+            });
+            var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function () { n.parentNode.insertBefore(s, n); };
+            s.type = "text/javascript";
+            s.async = true;
+            s.src = (d.location.protocol == "https:" ? "https:" : "http:") +
+                    "//st.top100.ru/top100/top100.js";
+            if (w.opera == "[object Opera]") {
+              d.addEventListener("DOMContentLoaded", f, false);
+            } else { 
+              f();
+            }
+          })(window, document, "_top100q");
+        </script>
+        <!-- fallback noscript удалён -->
+      </div>
+      
+      <!-- LiveInternet counter -->
+      <div class="header-counter">
+        <a href="https://www.liveinternet.ru/click" target="_blank">
+          <img id="licnt561B" width="88" height="31" style="border:0"
+               title="LiveInternet: показано число просмотров за 24 часа, посетителей за 24 часа и за сегодня"
+               src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+               alt="LiveInternet счетчик"/>
+        </a>
+        <script>
+          (function(d,s){
+            d.getElementById("licnt561B").src =
+              "https://counter.yadro.ru/hit?t11.6;r"+escape(d.referrer)+
+              ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+              (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+              ";h"+escape(d.title.substring(0,150))+";"+Math.random();
+          })(document, screen);
+        </script>
+      </div>
     </div>
-  </header>
+    <!-- /Блок счетчиков -->
+  </div>
+</header>
 
   <!-- Основной контент -->
   <div class="wrapper">
