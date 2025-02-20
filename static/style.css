@@ -7,13 +7,17 @@ html, body {
     padding: 0;
 }
 
+.counters {
+    display: flex;         
+    align-items: center;   
+    gap: 10px;            
+    margin-left: auto;     
+}
+
 .article-content {
     white-space: pre-wrap; /* Сохраняет пробелы и переносы строк */
 }
 .mailru-counter {
-    position: absolute;
-    top: 20px;            /* Расположим на том же уровне, что и LiveInternet */
-    right: 200px;          /* Отступ от правого края (чуть больше, чем у LiveInternet) */
     z-index: 1000;
     padding: 0;
     border: none;
@@ -35,11 +39,6 @@ html, body {
   background-color: #f0f0f0; /* Светло-серый фон */
   border: 1px solid #999; /* Более заметная серая рамка */
   padding: 10px;
-  margin-top: 15px;
-  text-align: center;
-  width: 100px; /* Чуть шире, чем в первом примере */
-  margin-left: auto;
-  margin-right: auto;
   border-radius: 5px; /* Скругленные углы рамки */
   box-shadow: 2px 2px 5px #ccc; /* Небольшая тень */
 }
@@ -92,9 +91,6 @@ header .logo a {
 
 .header-counter {
     display: block;
-    position: absolute; /* Абсолютное позиционирование */
-    top: 20px;          /* Отступ от верха шапки, настройте по вкусу */
-    right: 30px;         /* Отступ от правого края шапки, настройте по вкусу, чтобы совпадал с отступами header-content */
     z-index: 1000;      /* Убедитесь, что счетчик выше других элементов */
     padding: 0;         /* Убираем padding */
     border: none;        /* Убираем рамку */
