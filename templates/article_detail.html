@@ -110,7 +110,7 @@
     <h2>{{ article.title }}</h2>
     <p>Автор: {{ article.author.username }}</p>
     <div class="article-content">
-    {{ article.content | safe }}
+    {{ article.content.lstrip() | safe }}
     </div>
     <p><a href="/blog">← Вернуться к списку статей</a></p>
   </main>
