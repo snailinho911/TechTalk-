@@ -219,22 +219,7 @@ async def login(
     return response
 
 
-@app.get("/blog/{article_id}", response_class=HTMLResponse)
-async def article_detail(
-    article_id: int,
-    request: Request,
-    db: Session = Depends(get_db),
-    current_user: Optional[User] = Depends(get_current_user_from_cookie)
-):
-    article = db.query(Article).filter(Article.id == article_id).first()
-    if not article:
-        raise HTTPException(status_code=404, detail="Статья не найдена")
-    return templates.TemplateResponse("article_detail.html", {
-        "request": request,
-        "title": article.title,
-        "article": article,
-        "current_user": current_user
-    })
+
 
 
 
@@ -313,6 +298,23 @@ async def create_article_post(
         "request": request,
         "title": "Статья создана",
         "article": new_article
+    })
+
+@app.get("/blog/{article_id}", response_class=HTMLResponse)
+async def article_detail(
+    article_id: int,
+    request: Request,
+    db: Session = Depends(get_db),
+    current_user: Optional[User] = Depends(get_current_user_from_cookie)
+):
+    article = db.query(Article).filter(Article.id == article_id).first()
+    if not article:
+        raise HTTPException(status_code=404, detail="Статья не найдена")
+    return templates.TemplateResponse("article_detail.html", {
+        "request": request,
+        "title": article.title,
+        "article": article,
+        "current_user": current_user
     })
 
 
