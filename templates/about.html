@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <title>{{ title }}</title>
     <link rel="stylesheet" href="/static/style.css">
-    <!-- Подключаем скрипт Яндекс.Метрики (можно оставить и в body, как удобнее) -->
+
+    <!-- Яндекс.Метрика (скрипт) -->
     <script type="text/javascript">
        (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
        m[i].l=1*new Date();
@@ -46,8 +47,9 @@
             {% endif %}
         </nav>
 
-        <!-- Собираем все счётчики в одном блоке -->
+        <!-- Блок для всех счётчиков -->
         <div class="counters">
+          
           <!-- Яндекс.Метрика информер -->
           <a href="https://metrika.yandex.ru/stat/?id=99987528&amp;from=informer"
              target="_blank" rel="nofollow">
@@ -61,7 +63,7 @@
           </a>
           <!-- /Яндекс.Метрика информер -->
 
-          <!-- Mail.ru counter + логотип -->
+          <!-- Mail.ru counter -->
           <div class="mailru-counter">
             <script type="text/javascript">
               var _tmr = window._tmr || (window._tmr = []);
@@ -95,7 +97,7 @@
           </div>
           <!-- /Mail.ru counter -->
 
-          <!-- Rambler counter -->
+          <!-- Rambler counter (БЕЗ видимой картинки) -->
           <div class="rambler-counter">
             <script>
               (function (w, d, c) {
@@ -121,9 +123,12 @@
                 }
               })(window, document, "_top100q");
             </script>
+            <!-- УДАЛЯЕМ или закомментируем noscript, чтобы убрать fallback-изображение -->
+            <!--
             <noscript>
               <img src="//counter.rambler.ru/top100.cnt?pid=7736292" alt="Топ-100" />
             </noscript>
+            -->
           </div>
           <!-- /Rambler counter -->
 
@@ -151,7 +156,6 @@
     </div>
 </header>
 
-<!-- Основной контент -->
 <div class="wrapper">
   <main>
     <h2>О TechTalk Hub</h2>
@@ -163,10 +167,8 @@
   </main>
 </div>
 
-<!-- Подвал -->
 <footer>
   <p>© 2025 TechTalk Hub. Все права защищены.</p>
 </footer>
-
 </body>
 </html>
